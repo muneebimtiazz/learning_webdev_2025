@@ -1,0 +1,13 @@
+.styy{
+    color: blue;
+}
+*{
+    box-sizing: border-box;
+}
+.mailerror{
+    color: red;
+}
+.passerror{
+    color: red;
+}
+

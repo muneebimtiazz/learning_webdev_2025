@@ -1,0 +1,14 @@
+
+
+<%- include('./partials/navbar.ejs') %>
+
+<a href="/logout"><button>logout</button></a>
+
+<h2>Main Dashboard</h2>
+<% array.forEach((item)=>{ %>
+    <a href="/dashboard/<%= item._id %>" >
+        <h4><%= item.Title %></h4>
+    </a>
+<% }) %>
+
+<%- include('./partials/footer.ejs') %>
