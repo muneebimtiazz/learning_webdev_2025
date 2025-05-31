@@ -1,0 +1,42 @@
+.center {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+.navBar{
+    width: 1400px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.logo{
+    font-size: xx-large;
+}
+
+.links{
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; 
+}
+
+.links li {
+    display: inline-block;
+}
+
+.links a {
+    font-size: x-large;
+    font-weight: normal;
+    text-decoration: none;
+    color: black;
+}
+
+.active {
+    border: 2px solid red;
+}
