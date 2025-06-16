@@ -1,6 +1,6 @@
-const user=require('../models/user')
-const jwt=require('jsonwebtoken')
-const cookieParser=require('cookie-parser')
+import user from '../models/user.js';
+import jwt from 'jsonwebtoken';
+// import cookieParser from 'cookie-parser';
 //1
 export const signup_get=(req,res)=>{
     console.log(req.url);

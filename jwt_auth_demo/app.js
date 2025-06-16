@@ -3,12 +3,12 @@ let mongoose = require('mongoose')
 const detail=require('./models/anihub.js');
 const authroutes= require('./routes/authroutes.js')
 const cookieParser=require('cookie-parser')
-const path = require('path');
+// const path = require('path');
 const requireAuth = require('./middleware/jwtchecker.js');
 
 //express setup
 let app = express()
-app.listen(3000)
+
 //ejs setup
 app.set('view engine','ejs')
 //middleware 3rd party 
@@ -18,12 +18,17 @@ app.use(cookieParser())
 // for styling
 app.use(express.static('public'));
 
+
 const db='mongodb+srv://muneeb123:test123@cluster0.cnswz.mongodb.net/Anihu?retryWrites=true&w=majority&appName=Cluster0'
+// const db='mongodb+srv://muneeb123:test123@cluster0.cnswz.mongodb.net/Anihu?retryWrites=true&w=majority&appName=Cluster0'
 
 console.log('Attempting to connect to MongoDB...');
 mongoose.connect(db)
     .then(()=>{
         console.log('db sucessfully connected')
+        app.listen(3000, () => {
+            console.log('port 3000')
+        })
     })
     .catch((err)=>{
         console.log('db not connected'  , err)
